@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang='en' data-version='{{timestamp}}'>
+
+<head>
+
+	{{> base/meta}}
+
+	<link inline rel='stylesheet' href='bundle.css' />
+
+	{{> base/font}}
+
+	{{> base/analytics }}
+
+</head>
+
+<body>
+
+	{{> base/header 'sticky'}}
+
+	<main id='content'>
+
+		{{> story/intro }}
+		{{> story/part1 }}
+		{{> story/part2 }}
+		{{> story/part3 }}
+		{{> story/part4 }}
+		{{> story/part5 }}
+
+	</main>
+
+	{{> base/footer }}
+
+
+	<script src='{{basepath}}assets/scripts/d3.v5.12.0.min.js'></script>
+	<script src='main.js?version={{timestamp}}' async></script>
+</body>
+
+</html>
