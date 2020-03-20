@@ -739,5 +739,13 @@ main {
   max-width: 80rem;
   margin: 0 auto;
   padding: 0;
+  position: -webkit-sticky;
+  position: sticky;
+}
+.part2 {
+  position: relative;
+}
+.step {
+  margin-bottom: 50vh;
 }
 /*# sourceMappingURL=bundle.css.map */

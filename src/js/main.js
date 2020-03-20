@@ -4,6 +4,8 @@ import isMobile from "./utils/is-mobile";
 import linkFix from "./utils/link-fix";
 import graphic from "./graphic";
 import footer from "./footer";
+import "intersection-observer";
+import scrollama from "scrollama";
 
 const $body = d3.select("body");
 let previousWidth = 0;
@@ -40,10 +42,25 @@ function init() {
   window.addEventListener("resize", debounce(resize, 150));
   // setup sticky header menu
   setupStickyHeader();
-  // kick off graphic code
-  graphic.init();
+  // instantiate the scrollama
+  const scroller = scrollama();
+  // setup the instance, pass callback functions
+  scroller
+    .setup({
+      step: ".step"
+    })
+    .onStepEnter(response => {
+      console.log('working')
+      // { element, index, direction }
+    })
+    .onStepExit(response => {
+      console.log('working1')
+      // { element, index, direction }
+    });
   // load footer stories
   footer.init();
 }
+
+
 
 init();
