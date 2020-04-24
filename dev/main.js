@@ -2198,7 +2198,13 @@ function setupStickyHeader() {
 }
 
 function init() {
+  var iframe = d3.select('#bars').select('iframe').node();
+  var iframe1 = d3.select('#topten').select('iframe').node();
+  var iframe2 = d3.select('#rankings').select('iframe').node(); // var input = document.querySelector("#my-input");
+  // input.addEventListener("change", function(e) {
+  // var iframe = document.querySelector("#my-story iframe");
   // adds rel="noopener" to all target="_blank" links
+
   (0, _linkFix.default)(); // add mobile class to body tag
 
   $body.classed("is-mobile", _isMobile.default.any()); // setup resize event
@@ -2210,11 +2216,36 @@ function init() {
   var scroller = (0, _scrollama.default)(); // setup the instance, pass callback functions
 
   scroller.setup({
-    step: ".step"
+    step: "#bars-text .step",
+    offset: 0.4,
+    debug: false
   }).onStepEnter(function (response) {
-    console.log('working'); // { element, index, direction }
+    var test = response.index;
+    iframe.src = iframe.src.replace(/#slide-.*/, "") + "#slide-" + test; // { element , index , direction }
+  }).onStepExit(function (response) {// { element, index, direction }
+  });
+  var scroller1 = (0, _scrollama.default)(); // setup the instance, pass callback functions
+
+  scroller1.setup({
+    step: "#topten-text .step",
+    offset: 0.4,
+    debug: false
+  }).onStepEnter(function (response) {
+    var test = response.index;
+    iframe1.src = iframe1.src.replace(/#slide-.*/, "") + "#slide-" + test; // { element , index , direction }
   }).onStepExit(function (response) {
-    console.log('working1'); // { element, index, direction }
+    console.log(response); // { element, index, direction }
+  });
+  var scroller2 = (0, _scrollama.default)(); // setup the instance, pass callback functions
+
+  scroller2.setup({
+    step: "#rankings-text .step",
+    offset: 0.4,
+    debug: false
+  }).onStepEnter(function (response) {
+    var test = response.index;
+    iframe2.src = iframe2.src.replace(/#slide-.*/, "") + "#slide-" + test; // { element , index , direction }
+  }).onStepExit(function (response) {// { element, index, direction }
   }); // load footer stories
 
   _footer.default.init();

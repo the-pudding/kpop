@@ -222,7 +222,7 @@ body {
           font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 0, 'tnum' 1;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  background-color: #fff;
+  background-color: #ffe6e8;
   color: #282828;
   font-weight: 500;
   font-family: 'Tiempos Text Web', Georgia, Times, serif;
@@ -712,6 +712,7 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   max-width: 60rem;
   margin: 0 auto;
   text-align: center;
+  color: #303986;
 }
 .intro__dek {
   max-width: 40rem;
@@ -732,8 +733,14 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   margin-top: 1rem;
   text-align: center;
 }
+#kontinentalist-logo {
+  max-width: 10rem;
+  float: right;
+  position: absolute;
+}
 main {
   background-color: #ffe6e8;
+  color: #191717;
 }
 .chart {
   max-width: 80rem;
@@ -741,11 +748,137 @@ main {
   padding: 0;
   position: -webkit-sticky;
   position: sticky;
+  top: 10vh;
 }
 .part2 {
   position: relative;
 }
 .step {
   margin-bottom: 50vh;
+}
+.step:last-of-type {
+  padding-bottom: 70vh;
+}
+#final-group {
+  background-clip: content-box;
+}
+.overlay {
+  z-index: 1;
+  position: relative;
+  background-color: rgba(255,230,232,0.9);
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: 0.05rem solid;
+}
+.roles-grid {
+  width: 150%;
+  margin-left: -25%;
+}
+.side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+#first-role-image {
+  max-width: 75%;
+  margin: auto;
+}
+#bts-lead {
+  width: 130%;
+  left: 50%;
+  -ms-transform: translateX(-15%);
+      transform: translateX(-15%);
+  -webkit-transform: translateX(-15%);
+}
+.group {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.group-description {
+  margin-top: 0.4rem;
+  text-align: left;
+}
+#seniority-label {
+  color: #00ceac;
+}
+#rap-label {
+  color: #00c2ef;
+}
+#vocals-label {
+  color: #ac9bdb;
+}
+#aesthetics-label {
+  color: #f87f8b;
+}
+#dance-label {
+  color: #ecbd39;
+}
+.seniority-wrapper {
+  border: 0.05rem solid #00ceac;
+}
+.rap-wrapper {
+  border: 0.05rem solid #00c2ef;
+}
+.vocals-wrapper {
+  border: 0.05rem solid #ac9bdb;
+}
+.aesthetics-wrapper {
+  border: 0.05rem solid #f87f8b;
+}
+.dance-wrapper {
+  border: 0.05rem solid #ecbd39;
+}
+.generation-label {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.generation-description {
+  margin-top: 0.4rem;
+  text-align: left;
+}
+#generation-1-label {
+  color: #f0c94e;
+}
+#generation-2-label {
+  color: #e58b96;
+}
+#generation-3-label {
+  color: #73bcbd;
+}
+#supergroups-label {
+  color: #fca972;
+}
+#subunits-label {
+  color: #bf216b;
+}
+#idol-label {
+  color: #262151;
+}
+.generation-1-wrapper {
+  border: 0.05rem solid #f0c94e;
+}
+.generation-2-wrapper {
+  border: 0.05rem solid #e58b96;
+}
+.generation-3-wrapper {
+  border: 0.05rem solid #73bcbd;
+}
+.supergroups-wrapper {
+  border: 0.05rem solid #fca972;
+}
+.subunits-wrapper {
+  border: 0.05rem solid #bf216b;
+}
+.idol-shows-wrapper {
+  border: 0.05rem solid #262151;
+}
+.methodology {
+  margin-top: 5rem;
+}
+#methods-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+#methods {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
 }
 /*# sourceMappingURL=bundle.css.map */
