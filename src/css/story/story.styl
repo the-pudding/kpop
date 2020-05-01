@@ -10,6 +10,11 @@ main
   position sticky
   top 10vh
 
+.static-chart
+  max-width 80rem
+  margin 0 auto
+  padding 0 
+
 .part2 
   position relative
 
@@ -17,6 +22,7 @@ main
   margin-bottom 50vh
   &:last-of-type 
     padding-bottom 70vh
+    margin-bottom 0vh
 
 #final-group
   background-clip content-box
@@ -28,24 +34,64 @@ main
   padding .5rem 1rem .5rem 1rem
   border .05rem solid 
 
-
 .roles-grid
-  width 150%
-  margin-left -25%
+  +mq('bp-6')
+    width 150%
+    margin-left -25%
 
 .side-by-side
-  display grid
-  grid-template-columns 1fr 1fr 1fr 1fr
+  display block
 
-#first-role-image
+  +mq('bp-4')
+    display grid
+    grid-template-columns 1fr 1fr
+
+  +mq('bp-6')
+    display grid
+    grid-template-columns 1fr 1fr 1fr 1fr
+
+#first-role-image-wide
   max-width 75%
   margin auto
+  display none
+
+  +mq('bp-4')
+    display block
+
+#first-role-image-long
+  max-width 75%
+  margin auto
+  display block
+
+  +mq('bp-4')
+    display none
+
 
 #bts-lead
-  width 130%
-  left 50%
-  transform translateX(-15%)
-  -webkit-transform translateX(-15%)
+  +mq('bp-4')
+    width 130%
+    left 50%
+    transform translateX(-15%)
+    -webkit-transform translateX(-15%)
+
+  +mq('bp-4')
+    width 130%
+    left 50%
+    transform translateX(-15%)
+    -webkit-transform translateX(-15%)
+
+#bts-roles
+  +mq('bp-4')
+    width 130%
+    left 50%
+    transform translateX(-15%)
+    -webkit-transform translateX(-15%)
+
+  +mq('bp-4')
+    width 130%
+    left 50%
+    transform translateX(-15%)
+    -webkit-transform translateX(-15%)
 
 .group
   font-weight 700
@@ -138,7 +184,64 @@ main
 
 #methods
   font-size .8rem
-  margin-top .3rem 
+  margin-top .3rem  
+
+#footer-byline
+  font-size .8rem
+  margin-top .3rem  
+
+.tippy-box[data-theme~='vaporwave']{
+  background-color: #262151;
+  color: #F89DFC;
+  font-family: $national-narrow;
+  padding: .4rem;
+  text-align: center;
+  font-size: 1rem;
+  }
+
+.tooltip-highlight {
+  color #344EA5
+  cursor help
+}
+
+.tooltip-highlight-gif {
+  color #344EA5
+  cursor help
+}
+
+.legend 
+  background-color silver
+  margin 0 auto
+  position sticky
+  top 10vh
+  z-index 1
+  height 2.0038167938931295vh
+  font-size .2rem
+
+.legend-explanation
+  margin 0 auto
+  position sticky
+  top 12.0038167938931295vh
+  z-index 1
+  font-size 1rem
+  font-family $national-narrow
+  text-align center
+
+.legend-label
+  height .2vh
+  position absolute
+  top 2.0038167938931295vh
+  z-index 1
+  background-color #ffffff
+
+.legend-1
+  width 22.882882882882882vw
+
+.legend-2
+  width 10.951351351351352vw
+
+.legend-3
+  width 2.5233528459334913vw
 
 
 
