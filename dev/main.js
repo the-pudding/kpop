@@ -7061,7 +7061,7 @@ var _default = tippy;
 exports.default = _default;
 },{"@popperjs/core":"jI1K"}],"d4Ux":[function(require,module,exports) {
 
-},{}],"main.js":[function(require,module,exports) {
+},{}],"epB2":[function(require,module,exports) {
 "use strict";
 
 var _lodash = _interopRequireDefault(require("lodash.debounce"));
@@ -7128,17 +7128,18 @@ function init() {
 
   var tippyImages = {
     "bts": "<img src='https://media.giphy.com/media/3ofT5IUGY3FNyi5MAg/giphy.gif'>",
-    "seo": "<img src='https://media.giphy.com/media/3ofT5IUGY3FNyi5MAg/giphy.gif'>",
+    "seo": "<img src='https://media.giphy.com/media/YRKlg4ZYNZrhtFGyd8/giphy.gif'>",
     "super": "<img src='https://media.giphy.com/media/l0ErUBWwX9KaSoWnC/giphy.gif'>",
     "girls": "<img src='https://media.giphy.com/media/xTiIzA9hZNM9Ake81i/giphy.gif'>",
     "nct": "<img src='https://media.giphy.com/media/3ohuPG6tSoiaE7m0nK/giphy.gif'>",
     "blackpink": "<img src='https://media.giphy.com/media/fx5Eq1QkybZBYmfq7M/giphy.gif'>",
-    "djdoc": "<img src='assets/images/kpop_top_notext.png'>",
+    "djdoc": "<img src='https://media.giphy.com/media/TKYOjhcoMYUNl6SiE8/giphy.gif'>",
     "yoona": "<img src='https://media.giphy.com/media/3otPoBv5xqC4Za574k/giphy.gif'>",
     "exo": "<img src='https://media.giphy.com/media/3orif6LTloyNnUv8oE/giphy.gif'>",
     "seventeen": "<img src='https://media.giphy.com/media/3o6wr86sMOUaOOHXRS/giphy.gif'>",
     "jayz": "<img src='https://media.giphy.com/media/C0CLctoErM7WE/giphy.gif'>",
-    "jungkook": "<img src='https://media.giphy.com/media/SqBnf9Go5I4MhhGU9t/giphy.gif'>"
+    "jungkook": "<img src='https://media.giphy.com/media/SqBnf9Go5I4MhhGU9t/giphy.gif'>",
+    "exp": "<img src='https://media.giphy.com/media/PlV6Y75V8b0Bd2krC6/giphy.gif'>"
   };
   d3.selectAll(".tooltip-highlight-gif").attr("data-tippy-content", function (d) {
     var tippyValue = d3.select(this).attr("data-tippy-content");
@@ -7250,5 +7251,5 @@ function init() {
 }
 
 init();
-},{"lodash.debounce":"or4r","./utils/is-mobile":"WEtf","./utils/link-fix":"U9xJ","./graphic":"TAPd","./footer":"v9Q8","intersection-observer":"CRRU","scrollama":"vL5c","tippy.js":"DpGZ","tippy.js/dist/backdrop.css":"d4Ux","tippy.js/animations/shift-away.css":"d4Ux","tippy.js/animations/scale-extreme.css":"d4Ux"}]},{},["main.js"], null)
+},{"lodash.debounce":"or4r","./utils/is-mobile":"WEtf","./utils/link-fix":"U9xJ","./graphic":"TAPd","./footer":"v9Q8","intersection-observer":"CRRU","scrollama":"vL5c","tippy.js":"DpGZ","tippy.js/dist/backdrop.css":"d4Ux","tippy.js/animations/shift-away.css":"d4Ux","tippy.js/animations/scale-extreme.css":"d4Ux"}]},{},["epB2"], null)
 //# sourceMappingURL=/main.js.map

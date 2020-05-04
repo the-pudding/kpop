@@ -708,11 +708,28 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   padding: 6rem 1rem 3rem 1rem;
   background-color: #ffe6e8;
 }
-.intro__hed {
+.intro__tag {
   max-width: 60rem;
   margin: 0 auto;
   text-align: center;
-  color: #303986;
+  color: #333;
+  font-size: 1.6rem;
+  font-family: 'National 2 Narrow Web';
+  font-weight: 600;
+}
+.intro__hed {
+  max-width: 50rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  font-size: 2.2rem;
+  background-color: rgba(52,78,165,0.9);
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'National 2 Narrow Web';
 }
 .intro__dek {
   max-width: 40rem;
@@ -733,10 +750,34 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   margin-top: 1rem;
   text-align: center;
 }
+.intro__image {
+  max-width: 55rem;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("assets/images/kpop_top_notext.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 30rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 #kontinentalist-logo {
-  max-width: 10rem;
-  float: right;
-  position: absolute;
+  max-width: 6rem;
+  position: relative;
+  display: inline;
+}
+#pudding-logo {
+  max-width: 6rem;
+  position: relative;
+  display: inline;
 }
 main {
   background-color: #ffe6e8;
@@ -748,7 +789,7 @@ main {
   padding: 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 10vh;
+  top: 3vh;
 }
 .static-chart {
   max-width: 80rem;
@@ -765,9 +806,6 @@ main {
   padding-bottom: 70vh;
   margin-bottom: 0vh;
 }
-#final-group {
-  background-clip: content-box;
-}
 .overlay {
   z-index: 1;
   position: relative;
@@ -783,6 +821,8 @@ main {
 }
 .side-by-side {
   display: block;
+  margin: auto;
+  max-width: 90%;
 }
 @media only screen and (min-width: 40em) {
   .side-by-side {
@@ -797,19 +837,24 @@ main {
   }
 }
 #first-role-image-wide {
-  max-width: 75%;
   margin: auto;
   display: none;
 }
 @media only screen and (min-width: 40em) {
   #first-role-image-wide {
     display: block;
+    max-width: 90%;
+  }
+}
+@media only screen and (min-width: 60em) {
+  #first-role-image-wide {
+    max-width: 75%;
   }
 }
 #first-role-image-long {
-  max-width: 75%;
   margin: auto;
   display: block;
+  max-width: 90%;
 }
 @media only screen and (min-width: 40em) {
   #first-role-image-long {
@@ -970,7 +1015,7 @@ main {
   margin: 0 auto;
   position: -webkit-sticky;
   position: sticky;
-  top: 10vh;
+  top: 8vh;
   z-index: 1;
   height: 2.003816793893129vh;
   font-size: 0.2rem;
@@ -979,7 +1024,7 @@ main {
   margin: 0 auto;
   position: -webkit-sticky;
   position: sticky;
-  top: 12.00381679389313vh;
+  top: 10.00381679389313vh;
   z-index: 1;
   font-size: 1rem;
   font-family: 'National 2 Narrow Web';
@@ -988,7 +1033,7 @@ main {
 .legend-label {
   height: 0.2vh;
   position: absolute;
-  top: 2.003816793893129vh;
+  top: 0.003816793893129vh;
   z-index: 1;
   background-color: #fff;
 }

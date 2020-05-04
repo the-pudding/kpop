@@ -8,7 +8,7 @@ main
   margin 0 auto
   padding 0 
   position sticky
-  top 10vh
+  top 3vh
 
 .static-chart
   max-width 80rem
@@ -24,9 +24,6 @@ main
     padding-bottom 70vh
     margin-bottom 0vh
 
-#final-group
-  background-clip content-box
-
 .overlay
   z-index 1
   position relative
@@ -41,6 +38,8 @@ main
 
 .side-by-side
   display block
+  margin auto
+  max-width 90%
 
   +mq('bp-4')
     display grid
@@ -51,17 +50,20 @@ main
     grid-template-columns 1fr 1fr 1fr 1fr
 
 #first-role-image-wide
-  max-width 75%
   margin auto
   display none
 
   +mq('bp-4')
     display block
+    max-width 90%
+
+  +mq('bp-6')
+    max-width 75%
 
 #first-role-image-long
-  max-width 75%
   margin auto
   display block
+  max-width 90%
 
   +mq('bp-4')
     display none
@@ -213,7 +215,7 @@ main
   background-color silver
   margin 0 auto
   position sticky
-  top 10vh
+  top 8vh
   z-index 1
   height 2.0038167938931295vh
   font-size .2rem
@@ -221,7 +223,7 @@ main
 .legend-explanation
   margin 0 auto
   position sticky
-  top 12.0038167938931295vh
+  top 10.0038167938931295vh
   z-index 1
   font-size 1rem
   font-family $national-narrow
@@ -230,7 +232,7 @@ main
 .legend-label
   height .2vh
   position absolute
-  top 2.0038167938931295vh
+  top .0038167938931295vh
   z-index 1
   background-color #ffffff
 
