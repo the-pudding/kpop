@@ -4,22 +4,39 @@ main
   color #191717
 
 .chart
-  max-width 80rem
+  max-width 70rem
   margin 0 auto
   padding 0 
   position sticky
-  top 3vh
+  top 50vh
+
+  +mq('bp-4')
+    top 5vh
+
+
+  +mq('bp-6')
+    top 3vh
 
 .static-chart
-  max-width 80rem
+  max-width 70rem
   margin 0 auto
   padding 0 
+
+#chart3
+  top 70vh
+
+  +mq('bp-4')
+    top 5vh
+
+
+  +mq('bp-6')
+    top 3vh
 
 .part2 
   position relative
 
 .step
-  margin-bottom 50vh
+  margin-bottom 70vh
   &:last-of-type 
     padding-bottom 70vh
     margin-bottom 0vh
@@ -43,10 +60,12 @@ main
 
   +mq('bp-4')
     display grid
+    max-width 90%
     grid-template-columns 1fr 1fr
 
   +mq('bp-6')
     display grid
+    max-width 120%
     grid-template-columns 1fr 1fr 1fr 1fr
 
 #first-role-image-wide
@@ -244,6 +263,13 @@ main
 
 .legend-3
   width 2.5233528459334913vw
+
+#ytvideo
+  max-width inherit
+
+.standalone
+  margin-top 5rem
+  margin-bottom 5rem
 
 
 

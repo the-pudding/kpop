@@ -784,23 +784,46 @@ main {
   color: #191717;
 }
 .chart {
-  max-width: 80rem;
+  max-width: 70rem;
   margin: 0 auto;
   padding: 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 3vh;
+  top: 50vh;
+}
+@media only screen and (min-width: 40em) {
+  .chart {
+    top: 5vh;
+  }
+}
+@media only screen and (min-width: 60em) {
+  .chart {
+    top: 3vh;
+  }
 }
 .static-chart {
-  max-width: 80rem;
+  max-width: 70rem;
   margin: 0 auto;
   padding: 0;
+}
+#chart3 {
+  top: 70vh;
+}
+@media only screen and (min-width: 40em) {
+  #chart3 {
+    top: 5vh;
+  }
+}
+@media only screen and (min-width: 60em) {
+  #chart3 {
+    top: 3vh;
+  }
 }
 .part2 {
   position: relative;
 }
 .step {
-  margin-bottom: 50vh;
+  margin-bottom: 70vh;
 }
 .step:last-of-type {
   padding-bottom: 70vh;
@@ -827,12 +850,14 @@ main {
 @media only screen and (min-width: 40em) {
   .side-by-side {
     display: grid;
+    max-width: 90%;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media only screen and (min-width: 60em) {
   .side-by-side {
     display: grid;
+    max-width: 120%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
@@ -1045,5 +1070,12 @@ main {
 }
 .legend-3 {
   width: 2.523352845933491vw;
+}
+#ytvideo {
+  max-width: inherit;
+}
+.standalone {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 /*# sourceMappingURL=bundle.css.map */
