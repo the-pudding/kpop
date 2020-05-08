@@ -63,25 +63,54 @@ function init() {
 
 
    //set up tooltips
-  tippy('[data-tippy-content]',
-      {
-        allowHTML: true,
-        content: 'Global content',
-        trigger: 'mouseenter focus',
-        duration: [1000, 1000],
-        theme: 'vaporwave',
-        animation: 'scale-extreme',
-        inertia: true,
-        animateFill: true,
-        plugins: [animateFill],
-        maxWidth: 400,
-        placement: 'auto',
-        placement: 'auto-start',
-        placement: 'auto-end',
-        touch: ['hold', 500],
-        
-      }
-    );
+
+   d3.select(".tooltip-highlight-gif")
+    .each(function(d){
+      let imgTag = d3.select(this).attr("data-tippy-content");
+      d3.select(this)
+        .on("mouseover",function(d){
+          console.log("mouseovering");
+          d3.select(this)
+            .transition()
+            .duration(0)
+            .select(".mouseover-gif")
+            .style("display","inline-block")
+        })
+        .on("mouseout",function(d){
+          console.log("mouseouting");
+          d3.select(this)
+            .select(".mouseover-gif")
+            .transition()
+            .duration(1000)
+            .style("opacity",0)
+            .on("end",function(d){
+              d3.select(this).style("opacity",null).style("display",null);
+            })
+        })
+        .append("span")
+        .attr("class","mouseover-gif")
+        .html(imgTag)
+
+    })
+  // tippy('[data-tippy-content]',
+  //     {
+  //       allowHTML: true,
+  //       content: 'Global content',
+  //       trigger: 'mouseenter focus',
+  //       duration: [10000, 10000],
+  //       theme: 'vaporwave',
+  //       animation: 'scale-extreme',
+  //       inertia: true,
+  //       animateFill: true,
+  //       plugins: [animateFill],
+  //       maxWidth: 400,
+  //       placement: 'auto',
+  //       placement: 'auto-start',
+  //       placement: 'auto-end',
+  //       touch: ['hold', 500],
+  //
+  //     }
+  //   );
 
   //set up legend
   const legend = d3.select('.legend').classed('legend-1',true)
@@ -106,6 +135,7 @@ function init() {
   window.addEventListener("resize", debounce(resize, 150));
   // setup sticky header menu
   setupStickyHeader();
+  console.log("here");
   // instantiate the scrollama
   const scroller = scrollama();
   // setup the instance, pass callback functions
@@ -165,7 +195,7 @@ function init() {
   //   .onStepExit(response => {
   //     console.log(response)
   //     // { element, index, direction }
-  //   }); 
+  //   });
   const scroller2 = scrollama();
   // setup the instance, pass callback functions
   scroller2

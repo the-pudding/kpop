@@ -6,9 +6,10 @@ main
 .chart
   max-width 70rem
   margin 0 auto
-  padding 0 
+  padding 0
   position sticky
-  top 50vh
+  top 0px
+  height 100vh
 
   +mq('bp-4')
     top 5vh
@@ -20,10 +21,14 @@ main
 .static-chart
   max-width 70rem
   margin 0 auto
-  padding 0 
+  padding 0
 
 #chart3
-  top 70vh
+  height 100vh
+  #rankings
+    top 50%
+    transform translate(0,-50%)
+    position absolute
 
   +mq('bp-4')
     top 5vh
@@ -32,21 +37,46 @@ main
   +mq('bp-6')
     top 3vh
 
-.part2 
+.part2
   position relative
 
 .step
   margin-bottom 70vh
-  &:last-of-type 
+  &:last-of-type
     padding-bottom 70vh
     margin-bottom 0vh
+
+#bars
+  height 100vh
+  position absolute
+  top 0px
+  left 0px
+  width 100vw
+  iframe
+    height 100%
+    position absolute
+    width 100%
+
+
+#bars-text, #rankings-text
+  display flex
+  flex-direction column
+  max-width 90%
+  margin 0 auto
 
 .overlay
   z-index 1
   position relative
   background-color rgba(255,230,232,.9)
   padding .5rem 1rem .5rem 1rem
-  border .05rem solid 
+  border .05rem solid
+  max-width 400px
+
+  align-self flex-end
+
+#rankings-text
+  .overlay
+    align-self center
 
 .roles-grid
   +mq('bp-6')
@@ -205,11 +235,11 @@ main
 
 #methods
   font-size .8rem
-  margin-top .3rem  
+  margin-top .3rem
 
 #footer-byline
   font-size .8rem
-  margin-top .3rem  
+  margin-top .3rem
 
 .tippy-box[data-theme~='vaporwave']{
   background-color: #262151;
@@ -225,38 +255,48 @@ main
   cursor help
 }
 
-.tooltip-highlight-gif {
+.tooltip-highlight-gif
   color #344EA5
   cursor help
-}
+  position relative
+  .mouseover-gif
+    display none
+    img
+      position absolute
+      left 0px
+      top 2rem
+      width 300px
 
-.legend 
+.legend
   background-color silver
+  background rgb(240, 201, 78)
   margin 0 auto
-  position sticky
   top 8vh
   z-index 1
   height 2.0038167938931295vh
   font-size .2rem
+  border 1px solid white
 
 .legend-explanation
   margin 0 auto
-  position sticky
   top 10.0038167938931295vh
   z-index 1
-  font-size 1rem
+  font-size 12px
+  padding-top 4p
   font-family $national-narrow
   text-align center
 
 .legend-label
   height .2vh
   position absolute
-  top .0038167938931295vh
+  bottom 0px
   z-index 1
+  display none
   background-color #ffffff
 
 .legend-1
   width 22.882882882882882vw
+  width calc(calc(100vw - 100px)*0.253)
 
 .legend-2
   width 10.951351351351352vw
@@ -264,14 +304,19 @@ main
 .legend-3
   width 2.5233528459334913vw
 
-#ytvideo
-  max-width inherit
+.yt-wrapper
+  max-width 100%
+  padding-bottom 56%
+  height 0
+  position relative
+  #ytvideo
+    width 100%
+    height 100%
+    top 0px
+    left 0px
+    position absolute
+
 
 .standalone
   margin-top 5rem
   margin-bottom 5rem
-
-
-
-
-

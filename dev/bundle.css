@@ -520,7 +520,7 @@ header {
 header a.logo {
   display: block;
   border: none;
-  max-width: 9rem;
+  max-width: 7rem;
   margin: 1rem auto;
 }
 header a.logo svg {
@@ -705,7 +705,7 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
 }
 .intro {
   margin: 0 auto;
-  padding: 6rem 1rem 3rem 1rem;
+  padding: 6rem 0rem 3rem 0rem;
   background-color: #ffe6e8;
 }
 .intro__tag {
@@ -713,38 +713,42 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   margin: 0 auto;
   text-align: center;
   color: #333;
-  font-size: 1.6rem;
+  font-size: 18px;
   font-family: 'National 2 Narrow Web';
-  font-weight: 600;
+  font-weight: 500;
+  width: 95%;
 }
 .intro__hed {
   max-width: 50rem;
   margin: 0 auto;
   text-align: center;
-  color: #fff;
-  font-size: 2.2rem;
-  background-color: rgba(52,78,165,0.9);
+  color: rgba(0,0,0,0.85);
+  font-size: 55px;
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  line-height: 1.3;
   font-family: 'National 2 Narrow Web';
+  width: 95%;
 }
 .intro__dek {
   max-width: 40rem;
   margin: 0 auto;
   margin-top: 1rem;
   text-align: center;
+  width: 95%;
 }
 .intro__byline {
   max-width: 40rem;
   margin: 0 auto;
   margin-top: 1rem;
   text-align: center;
+  margin-top: 5rem;
+  font-size: 16px;
 }
 .intro__time {
-  display: block;
   max-width: 40rem;
   margin: 0 auto;
   margin-top: 1rem;
@@ -754,7 +758,7 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   max-width: 55rem;
   margin: 0 auto;
   text-align: center;
-  background-image: url("assets/images/kpop_top_notext.png");
+  background-image: url("assets/images/Kpop_top_notext.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -768,6 +772,7 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 3rem;
 }
 #kontinentalist-logo {
   max-width: 6rem;
@@ -789,7 +794,8 @@ main {
   padding: 0;
   position: -webkit-sticky;
   position: sticky;
-  top: 50vh;
+  top: 0px;
+  height: 100vh;
 }
 @media only screen and (min-width: 40em) {
   .chart {
@@ -807,7 +813,14 @@ main {
   padding: 0;
 }
 #chart3 {
-  top: 70vh;
+  height: 100vh;
+}
+#chart3 #rankings {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  position: absolute;
 }
 @media only screen and (min-width: 40em) {
   #chart3 {
@@ -829,12 +842,43 @@ main {
   padding-bottom: 70vh;
   margin-bottom: 0vh;
 }
+#bars {
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+}
+#bars iframe {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+#bars-text,
+#rankings-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 90%;
+  margin: 0 auto;
+}
 .overlay {
   z-index: 1;
   position: relative;
   background-color: rgba(255,230,232,0.9);
   padding: 0.5rem 1rem 0.5rem 1rem;
   border: 0.05rem solid;
+  max-width: 400px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+#rankings-text .overlay {
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 @media only screen and (min-width: 60em) {
   .roles-grid {
@@ -1034,36 +1078,47 @@ main {
 .tooltip-highlight-gif {
   color: #344ea5;
   cursor: help;
+  position: relative;
+}
+.tooltip-highlight-gif .mouseover-gif {
+  display: none;
+}
+.tooltip-highlight-gif .mouseover-gif img {
+  position: absolute;
+  left: 0px;
+  top: 2rem;
+  width: 300px;
 }
 .legend {
   background-color: #c0c0c0;
+  background: #f0c94e;
   margin: 0 auto;
-  position: -webkit-sticky;
-  position: sticky;
   top: 8vh;
   z-index: 1;
   height: 2.003816793893129vh;
   font-size: 0.2rem;
+  border: 1px solid #fff;
 }
 .legend-explanation {
   margin: 0 auto;
-  position: -webkit-sticky;
-  position: sticky;
   top: 10.00381679389313vh;
   z-index: 1;
-  font-size: 1rem;
+  font-size: 12px;
+  padding-top: 4p;
   font-family: 'National 2 Narrow Web';
   text-align: center;
 }
 .legend-label {
   height: 0.2vh;
   position: absolute;
-  top: 0.003816793893129vh;
+  bottom: 0px;
   z-index: 1;
+  display: none;
   background-color: #fff;
 }
 .legend-1 {
   width: 22.882882882882882vw;
+  width: calc(calc(100vw - 100px) * 0.253);
 }
 .legend-2 {
   width: 10.951351351351352vw;
@@ -1071,8 +1126,18 @@ main {
 .legend-3 {
   width: 2.523352845933491vw;
 }
-#ytvideo {
-  max-width: inherit;
+.yt-wrapper {
+  max-width: 100%;
+  padding-bottom: 56%;
+  height: 0;
+  position: relative;
+}
+.yt-wrapper #ytvideo {
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
 }
 .standalone {
   margin-top: 5rem;
