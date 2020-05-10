@@ -222,7 +222,7 @@ body {
           font-feature-settings: 'kern' 1, 'onum' 0, 'liga' 0, 'tnum' 1;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
-  background-color: #ffe6e8;
+  background-color: #fff2f2;
   color: #282828;
   font-weight: 500;
   font-family: 'Tiempos Text Web', Georgia, Times, serif;
@@ -514,7 +514,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #ffe6e8;
+  background-color: #fff2f2;
   font-family: 'National 2 Web', Helvetica, Arial, sans-serif;
 }
 header a.logo {
@@ -524,7 +524,7 @@ header a.logo {
   margin: 1rem auto;
 }
 header a.logo svg {
-  fill: #282828;
+  fill: #0b0f22;
   display: block;
   width: 100%;
 }
@@ -532,7 +532,7 @@ header.is-sticky {
   position: fixed;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  background-color: #ffe6e8;
+  background-color: #fff2f2;
   -webkit-box-shadow: 0 0 7px 1px #c9c9c9;
           box-shadow: 0 0 7px 1px #c9c9c9;
   height: 3rem;
@@ -703,16 +703,23 @@ header.is-sticky.is-dark .header__toggle svg {
 header.is-sticky.is-dark .header__toggle.is-visible span svg {
   stroke: #282828;
 }
+p,
+a {
+  color: #0b0f22;
+}
+a {
+  border-color: #0b0f22;
+}
 .intro {
   margin: 0 auto;
   padding: 6rem 0rem 3rem 0rem;
-  background-color: #ffe6e8;
+  background-color: #fff2f2;
 }
 .intro__tag {
   max-width: 60rem;
   margin: 0 auto;
   text-align: center;
-  color: #333;
+  color: #0b0f22;
   font-size: 18px;
   font-family: 'National 2 Narrow Web';
   font-weight: 500;
@@ -722,7 +729,7 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   max-width: 50rem;
   margin: 0 auto;
   text-align: center;
-  color: rgba(0,0,0,0.85);
+  color: #1b065e;
   font-size: 55px;
   -ms-flex-item-align: center;
       align-self: center;
@@ -762,7 +769,7 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 30rem;
+  height: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -785,17 +792,21 @@ header.is-sticky.is-dark .header__toggle.is-visible span svg {
   display: inline;
 }
 main {
-  background-color: #ffe6e8;
+  background-color: #fff2f2;
   color: #191717;
 }
+main .prose-image {
+  max-width: 60rem;
+  margin: 0 auto;
+}
 .chart {
-  max-width: 70rem;
   margin: 0 auto;
   padding: 0;
   position: -webkit-sticky;
   position: sticky;
   top: 0px;
   height: 100vh;
+  z-index: 0;
 }
 @media only screen and (min-width: 40em) {
   .chart {
@@ -845,9 +856,13 @@ main {
 #bars {
   height: 100vh;
   position: absolute;
-  top: 0px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   left: 0px;
   width: 100vw;
+  max-height: 700px;
 }
 #bars iframe {
   height: 100%;
@@ -869,61 +884,55 @@ main {
 .overlay {
   z-index: 1;
   position: relative;
-  background-color: rgba(255,230,232,0.9);
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border: 0.05rem solid;
+  background-color: #fff2f2;
+  border: none;
+  border-left: 3px solid #1b065e;
+  padding: 0.5rem 2rem 0.5rem 2rem;
   max-width: 400px;
+  -webkit-box-shadow: 3px 5px 11px rgba(27,6,94,0.22);
+          box-shadow: 3px 5px 11px rgba(27,6,94,0.22);
   -ms-flex-item-align: end;
       align-self: flex-end;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 #rankings-text .overlay {
   -ms-flex-item-align: center;
       align-self: center;
 }
-@media only screen and (min-width: 60em) {
-  .roles-grid {
-    width: 150%;
-    margin-left: -25%;
-  }
-}
-.side-by-side {
+.roles-grid .side-by-side {
   display: block;
   margin: auto;
-  max-width: 90%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1200px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
-@media only screen and (min-width: 40em) {
-  .side-by-side {
-    display: grid;
-    max-width: 90%;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media only screen and (min-width: 60em) {
-  .side-by-side {
-    display: grid;
-    max-width: 120%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+.roles-grid .side-by-side img {
+  width: clamp(250px, 25%, 300px);
 }
 #first-role-image-wide {
   margin: auto;
   display: none;
+  width: 90%;
+  min-width: 40rem;
+  max-width: 800px;
+  margin-top: 3rem;
 }
 @media only screen and (min-width: 40em) {
   #first-role-image-wide {
     display: block;
-    max-width: 90%;
-  }
-}
-@media only screen and (min-width: 60em) {
-  #first-role-image-wide {
-    max-width: 75%;
   }
 }
 #first-role-image-long {
   margin: auto;
   display: block;
-  max-width: 90%;
+  width: clamp(250px, 25%, 300px);
 }
 @media only screen and (min-width: 40em) {
   #first-role-image-long {
@@ -990,23 +999,26 @@ main {
   color: #ecbd39;
 }
 .seniority-wrapper {
-  border: 0.05rem solid #00ceac;
+  border-color: #00ceac;
 }
 .rap-wrapper {
-  border: 0.05rem solid #00c2ef;
+  border-color: #00c2ef;
 }
 .vocals-wrapper {
-  border: 0.05rem solid #ac9bdb;
+  border-color: #ac9bdb;
 }
 .aesthetics-wrapper {
-  border: 0.05rem solid #f87f8b;
+  border-color: #f87f8b;
 }
 .dance-wrapper {
-  border: 0.05rem solid #ecbd39;
+  border-color: #ecbd39;
+  margin-left: auto;
+  margin-right: auto;
 }
 .generation-label {
   font-weight: 700;
-  font-size: 1.7rem;
+  font-family: 'National 2 Narrow';
+  font-size: 34px;
 }
 .generation-description {
   margin-top: 0.4rem;
@@ -1031,22 +1043,22 @@ main {
   color: #262151;
 }
 .generation-1-wrapper {
-  border: 0.05rem solid #f0c94e;
+  border-color: #f0c94e;
 }
 .generation-2-wrapper {
-  border: 0.05rem solid #e58b96;
+  border-color: #e58b96;
 }
 .generation-3-wrapper {
-  border: 0.05rem solid #73bcbd;
+  border-color: #73bcbd;
 }
 .supergroups-wrapper {
-  border: 0.05rem solid #fca972;
+  border-color: #fca972;
 }
 .subunits-wrapper {
-  border: 0.05rem solid #bf216b;
+  border-color: #bf216b;
 }
 .idol-shows-wrapper {
-  border: 0.05rem solid #262151;
+  border-color: #262151;
 }
 .methodology {
   margin-top: 5rem;
@@ -1071,12 +1083,14 @@ main {
   text-align: center;
   font-size: 1rem;
 }
-.tooltip-highlight {
+.tooltip-highlight,
+.tooltip-highlight-gif {
   color: #344ea5;
+  color: #0b0f22;
+  background: #fcd3d4;
   cursor: help;
 }
 .tooltip-highlight-gif {
-  color: #344ea5;
   cursor: help;
   position: relative;
 }
@@ -1140,7 +1154,6 @@ main {
   position: absolute;
 }
 .standalone {
-  margin-top: 5rem;
   margin-bottom: 5rem;
 }
 /*# sourceMappingURL=bundle.css.map */

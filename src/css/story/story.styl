@@ -1,15 +1,20 @@
+
+
 /* CUSTOM STORY STYLE */
 main
-  background-color #FFE6E8
+  background-color $pink
   color #191717
+  .prose-image
+    max-width 60rem
+    margin 0 auto
 
 .chart
-  max-width 70rem
   margin 0 auto
   padding 0
   position sticky
   top 0px
   height 100vh
+  z-index 0
 
   +mq('bp-4')
     top 5vh
@@ -49,9 +54,11 @@ main
 #bars
   height 100vh
   position absolute
-  top 0px
+  top 50%
+  transform translate(0,-50%)
   left 0px
   width 100vw
+  max-height 700px
   iframe
     height 100%
     position absolute
@@ -67,52 +74,45 @@ main
 .overlay
   z-index 1
   position relative
-  background-color rgba(255,230,232,.9)
-  padding .5rem 1rem .5rem 1rem
-  border .05rem solid
+  background-color $pink
+  border none
+  border-left 3px solid $light-blue
+  padding .5rem 2rem .5rem 2rem
   max-width 400px
-
+  box-shadow 3px 5px 11px rgba(27, 6, 94, 0.22)
   align-self flex-end
+  transform translate3d(0,0,0)
 
 #rankings-text
   .overlay
     align-self center
 
 .roles-grid
-  +mq('bp-6')
-    width 150%
-    margin-left -25%
-
-.side-by-side
-  display block
-  margin auto
-  max-width 90%
-
-  +mq('bp-4')
-    display grid
-    max-width 90%
-    grid-template-columns 1fr 1fr
-
-  +mq('bp-6')
-    display grid
-    max-width 120%
-    grid-template-columns 1fr 1fr 1fr 1fr
-
+  .side-by-side
+    display block
+    margin auto
+    width 90%
+    display flex
+    flex-wrap wrap
+    max-width 1200px
+    justify-content space-around
+    img
+      width clamp(250px, 25%, 300px)
 #first-role-image-wide
   margin auto
   display none
+  width 90%
+  min-width 40rem
+  max-width 800px
+  margin-top 3rem
 
   +mq('bp-4')
     display block
-    max-width 90%
-
-  +mq('bp-6')
-    max-width 75%
 
 #first-role-image-long
   margin auto
   display block
-  max-width 90%
+  width clamp(250px, 25%, 300px)
 
   +mq('bp-4')
     display none
@@ -168,23 +168,26 @@ main
   color #ECBD39
 
 .seniority-wrapper
-  border .05rem solid #00CEAC
+  border-color #00CEAC
 
 .rap-wrapper
-  border .05rem solid #00C2EF
+  border-color #00C2EF
 
 .vocals-wrapper
-  border .05rem solid #AC9BDB
+  border-color #AC9BDB
 
 .aesthetics-wrapper
-  border .05rem solid #F87F8B
+  border-color #F87F8B
 
 .dance-wrapper
-  border .05rem solid #ECBD39
+  border-color #ECBD39
+  margin-left auto
+  margin-right auto
 
 .generation-label
   font-weight 700
-  font-size 1.7rem
+  font-family 'National 2 Narrow'
+  font-size 34px
 
 .generation-description
   margin-top .4rem
@@ -209,22 +212,22 @@ main
   color #262151
 
 .generation-1-wrapper
-  border .05rem solid #F0C94E
+  border-color #F0C94E
 
 .generation-2-wrapper
-  border .05rem solid #E58B96
+  border-color #E58B96
 
 .generation-3-wrapper
-  border .05rem solid #73BCBD
+  border-color #73BCBD
 
 .supergroups-wrapper
-  border .05rem solid #FCA972
+  border-color #FCA972
 
 .subunits-wrapper
-  border .05rem solid #BF216B
+  border-color #BF216B
 
 .idol-shows-wrapper
-  border .05rem solid #262151
+  border-color #262151
 
 .methodology
   margin-top 5rem
@@ -250,13 +253,13 @@ main
   font-size: 1rem;
   }
 
-.tooltip-highlight {
+.tooltip-highlight, .tooltip-highlight-gif
   color #344EA5
+  color $text-blue
+  background #fcd3d4
   cursor help
-}
 
 .tooltip-highlight-gif
-  color #344EA5
   cursor help
   position relative
   .mouseover-gif
@@ -318,5 +321,4 @@ main
 
 
 .standalone
-  margin-top 5rem
   margin-bottom 5rem
