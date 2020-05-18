@@ -339,6 +339,12 @@ footer.pudding-footer {
   font-family: 'National 2 Web', Helvetica, Arial, sans-serif;
   margin-top: 3rem;
 }
+@media (max-width: 500px) {
+  footer.pudding-footer #wordmark {
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
 footer.pudding-footer .footer-recirc {
   max-width: 65rem;
   margin: 0 auto;
@@ -456,7 +462,7 @@ footer.pudding-footer .footer-company__cta-list li p {
   padding-left: 0.5rem;
   padding-top: 0.1rem;
   line-height: 1;
-  color: #949494;
+  color: #111;
 }
 @media only screen and (min-width: 40em) {
   footer.pudding-footer .footer-company__cta-list li p {
@@ -464,7 +470,7 @@ footer.pudding-footer .footer-company__cta-list li p {
   }
 }
 footer.pudding-footer .footer-company__cta-list li svg {
-  fill: #949494;
+  fill: #111;
   stroke: none;
   vertical-align: middle;
 }
@@ -472,12 +478,12 @@ footer.pudding-footer .footer-company__cta-list li svg circle,
 footer.pudding-footer .footer-company__cta-list li svg polyline,
 footer.pudding-footer .footer-company__cta-list li svg line {
   fill: none;
-  stroke: #949494;
+  stroke: #111;
 }
 footer.pudding-footer .footer-company__cta-list li .feather-mail path,
 footer.pudding-footer .footer-company__cta-list li .feather-lock path,
 footer.pudding-footer .footer-company__cta-list li .feather-rss path {
-  stroke: #949494;
+  stroke: #111;
   fill: none;
 }
 footer.pudding-footer .footer-company__about {
@@ -485,7 +491,7 @@ footer.pudding-footer .footer-company__about {
       -ms-flex-order: 0;
           order: 0;
   width: 100%;
-  color: #949494;
+  color: #111;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -503,6 +509,9 @@ footer.pudding-footer .footer-company__about p {
   margin: 0;
   font-size: 16px;
   line-height: 1.4;
+}
+footer.pudding-footer .footer-company__about .footer-company__description {
+  margin-bottom: 1rem;
 }
 footer.pudding-footer .footer-company__about svg {
   width: 12rem;
@@ -767,9 +776,9 @@ a {
   text-align: center;
   background-image: url("assets/images/Kpop_top_notext.png");
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  height: 40rem;
+  padding-bottom: 45%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -781,6 +790,11 @@ a {
           align-items: center;
   margin-bottom: 3rem;
 }
+@media (max-width: 500px) {
+  .intro__image {
+    padding-bottom: 75%;
+  }
+}
 #kontinentalist-logo {
   max-width: 6rem;
   position: relative;
@@ -790,6 +804,19 @@ a {
   max-width: 6rem;
   position: relative;
   display: inline;
+}
+h2 {
+  line-height: 1.3;
+}
+.mouseover-text {
+  display: none;
+  background: #fcd4d4;
+  font-family: 'National 2 Narrow';
+  font-size: 17px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0.5rem;
+  line-height: 1.3;
 }
 main {
   background-color: #fff2f2;
@@ -808,55 +835,76 @@ main .prose-image {
   height: 100vh;
   z-index: 0;
 }
-@media only screen and (min-width: 40em) {
+@media (min-height: 750px) and (min-width: 700px) {
   .chart {
-    top: 5vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-}
-@media only screen and (min-width: 60em) {
-  .chart {
-    top: 3vh;
+  .chart .flourish-embed,
+  .chart #bars {
+    height: auto;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    position: absolute;
+  }
+  .chart .chart-title {
+    position: absolute;
+    top: 3rem;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
   }
 }
 .chart-title {
-  top: 7vh;
-  position: absolute;
-  left: 50px;
   font-family: 'National 2 Narrow Web';
   font-weight: 600;
   color: #191717;
+  text-align: center;
+  line-height: 1.2;
+  z-index: 1000;
+  position: relative;
+  margin: 0 auto;
+}
+.chart-title h2 {
+  margin: 0 auto;
+}
+@media (max-width: 550px) {
+  .chart-title h2 {
+    font-size: 18px;
+  }
+}
+.chart-title .legend-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -4px;
 }
 .static-chart-title {
   position: relative;
-  left: 50px;
   font-family: 'National 2 Narrow Web';
   font-weight: 600;
   color: #191717;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 500px;
 }
 .static-chart {
   max-width: 70rem;
   margin: 0 auto;
   padding: 0;
-}
-#chart3 {
-  height: 100vh;
-}
-#chart3 #rankings {
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  position: absolute;
-}
-@media only screen and (min-width: 40em) {
-  #chart3 {
-    top: 5vh;
-  }
-}
-@media only screen and (min-width: 60em) {
-  #chart3 {
-    top: 3vh;
-  }
 }
 .part2 {
   position: relative;
@@ -868,21 +916,14 @@ main .prose-image {
   padding-bottom: 70vh;
   margin-bottom: 0vh;
 }
-#bars {
-  height: 100vh;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-      -ms-transform: translate(0, -50%);
-          transform: translate(0, -50%);
-  left: 0px;
-  width: 100vw;
-  max-height: 700px;
+.part3 {
+  padding-top: 3rem;
 }
-#bars iframe {
-  height: 100%;
+#bars {
+  width: 100vw;
+  height: calc(100% - 10px);
+  top: 10px;
   position: absolute;
-  width: 100%;
 }
 #bars-text,
 #rankings-text {
@@ -915,6 +956,17 @@ main .prose-image {
   -ms-flex-item-align: center;
       align-self: center;
 }
+.roles-grid svg {
+  width: clamp(250px, 25%, 300px);
+}
+@media (max-width: 500px) {
+  .roles-grid svg {
+    width: 90%;
+  }
+}
+.roles-grid svg text {
+  font-family: 'National 2 Narrow Web';
+}
 .roles-grid .side-by-side {
   display: block;
   margin: auto;
@@ -928,11 +980,10 @@ main .prose-image {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.roles-grid .side-by-side svg {
-  width: clamp(250px, 25%, 300px);
-}
-.roles-grid .side-by-side svg text {
-  font-family: 'National 2 Narrow Web';
+@media (max-width: 500px) {
+  .roles-grid .side-by-side svg {
+    margin-bottom: 3rem;
+  }
 }
 #first-role-image-wide {
   margin: auto;
@@ -950,7 +1001,11 @@ main .prose-image {
 #first-role-image-long {
   margin: auto;
   display: block;
-  width: clamp(250px, 25%, 300px);
+}
+@media (max-width: 500px) {
+  #first-role-image-long {
+    margin-bottom: 3rem;
+  }
 }
 @media only screen and (min-width: 40em) {
   #first-role-image-long {
@@ -1077,6 +1132,7 @@ main .prose-image {
 }
 .idol-shows-wrapper {
   border-color: #262151;
+  margin-left: auto;
 }
 .methodology {
   margin-top: 5rem;
@@ -1111,6 +1167,7 @@ main .prose-image {
 .tooltip-highlight-gif {
   cursor: help;
   position: relative;
+  z-index: 10000000;
 }
 .tooltip-highlight-gif .mouseover-gif {
   display: none;
@@ -1124,21 +1181,22 @@ main .prose-image {
 .legend {
   background-color: #c0c0c0;
   background: #f0c94e;
-  margin: 0 auto;
-  top: 8vh;
-  z-index: 1;
+  margin: 0;
   height: 2.003816793893129vh;
   font-size: 0.2rem;
+  margin-top: 5px;
+  margin-right: 5px;
   border: 1px solid #fff;
 }
 .legend-explanation {
-  margin: 0 auto;
+  margin: 0;
   top: 10.00381679389313vh;
   z-index: 1;
   font-size: 12px;
-  padding-top: 4p;
   font-family: 'National 2 Narrow Web';
   text-align: center;
+  padding-top: 3px;
+  font-weight: 300;
 }
 .legend-label {
   height: 0.2vh;

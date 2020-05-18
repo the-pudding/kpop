@@ -50,21 +50,36 @@ function init() {
                        "seventeen":"<img src='https://media.giphy.com/media/3o6wr86sMOUaOOHXRS/giphy.gif'>",
                        "jayz":"<img src='https://media.giphy.com/media/C0CLctoErM7WE/giphy.gif'>",
                        "jungkook":"<img src='https://media.giphy.com/media/SqBnf9Go5I4MhhGU9t/giphy.gif'>",
-                       "exp":"<img src='https://media.giphy.com/media/PlV6Y75V8b0Bd2krC6/giphy.gif'>"
+                       "exp":"<img src='https://media.giphy.com/media/PlV6Y75V8b0Bd2krC6/giphy.gif'>"}
 
-
-
-                      }
   d3.selectAll(".tooltip-highlight-gif")
     .attr("data-tippy-content", function (d) {
         var tippyValue = d3.select(this).attr("data-tippy-content")
         return tippyImages[tippyValue]
     })
 
-
    //set up tooltips
+   d3.selectAll(".tooltip-highlight")
+    .each(function(d){
+      let text = d3.select(this).attr("data-tippy-content");
+      d3.select(this)
+        .on("mouseover",function(d){
+          d3.select(this)
+            .select("span")
+            .style("display","inline-block")
+        })
+        .on("mouseout",function(d){
+          d3.select(this)
+            .select("span")
+            .style("display",null)
+        })
+        .append("span")
+        .attr("class","mouseover-text")
+        .html(text);
+    })
 
-   d3.select(".tooltip-highlight-gif")
+
+   d3.selectAll(".tooltip-highlight-gif")
     .each(function(d){
       let imgTag = d3.select(this).attr("data-tippy-content");
       d3.select(this)
@@ -90,7 +105,6 @@ function init() {
         .append("span")
         .attr("class","mouseover-gif")
         .html(imgTag)
-
     })
   // tippy('[data-tippy-content]',
   //     {

@@ -3,6 +3,11 @@ footer.pudding-footer
 	border-top 4px solid $black
 	font-family $sans
 	margin-top 3rem
+	#wordmark
+		@media (max-width: 500px)
+			margin 0 auto
+			margin-bottom 1rem
+
 
 	.footer-recirc
 		max-width 65rem
@@ -75,25 +80,25 @@ footer.pudding-footer
 					padding-left 0.5rem
 					padding-top 0.1rem
 					line-height 1
-					color $gray
+					color #111
 					+mq('bp-4')
 						set-type-size(large)
 
 				svg
-					fill $gray
+					fill #111
 					stroke none
 					vertical-align middle
 					circle, polyline, line
 						fill none
-						stroke $gray
+						stroke #111
 				.feather-mail path, .feather-lock path, .feather-rss path
-						stroke $gray
+						stroke #111
 						fill none
 
 		&__about
 			order 0
 			width 100%
-			color $gray
+			color #111
 			display flex
 			flex-direction column
 			+mq('bp-5')
@@ -103,6 +108,8 @@ footer.pudding-footer
 				margin 0
 				set-type-size(root, false)
 				line-height 1.4
+			.footer-company__description
+				margin-bottom 1rem
 			svg
 				width 12rem
 				margin-bottom 0.5rem

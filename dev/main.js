@@ -7143,7 +7143,15 @@ function init() {
     return tippyImages[tippyValue];
   }); //set up tooltips
 
-  d3.select(".tooltip-highlight-gif").each(function (d) {
+  d3.selectAll(".tooltip-highlight").each(function (d) {
+    var text = d3.select(this).attr("data-tippy-content");
+    d3.select(this).on("mouseover", function (d) {
+      d3.select(this).select("span").style("display", "inline-block");
+    }).on("mouseout", function (d) {
+      d3.select(this).select("span").style("display", null);
+    }).append("span").attr("class", "mouseover-text").html(text);
+  });
+  d3.selectAll(".tooltip-highlight-gif").each(function (d) {
     var imgTag = d3.select(this).attr("data-tippy-content");
     d3.select(this).on("mouseover", function (d) {
       console.log("mouseovering");
