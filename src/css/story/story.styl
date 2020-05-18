@@ -23,6 +23,21 @@ main
   +mq('bp-6')
     top 3vh
 
+.chart-title
+  top 7vh
+  position absolute
+  left 50px
+  font-family $national-narrow
+  font-weight 600
+  color #191717
+
+.static-chart-title
+  position relative
+  left 50px
+  font-family $national-narrow
+  font-weight 600
+  color #191717
+
 .static-chart
   max-width 70rem
   margin 0 auto
@@ -96,8 +111,11 @@ main
     flex-wrap wrap
     max-width 1200px
     justify-content space-around
-    img
+    svg
+      text
+        font-family $national-narrow
       width clamp(250px, 25%, 300px)
+
 #first-role-image-wide
   margin auto
   display none

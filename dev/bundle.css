@@ -818,6 +818,21 @@ main .prose-image {
     top: 3vh;
   }
 }
+.chart-title {
+  top: 7vh;
+  position: absolute;
+  left: 50px;
+  font-family: 'National 2 Narrow Web';
+  font-weight: 600;
+  color: #191717;
+}
+.static-chart-title {
+  position: relative;
+  left: 50px;
+  font-family: 'National 2 Narrow Web';
+  font-weight: 600;
+  color: #191717;
+}
 .static-chart {
   max-width: 70rem;
   margin: 0 auto;
@@ -913,8 +928,11 @@ main .prose-image {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }
-.roles-grid .side-by-side img {
+.roles-grid .side-by-side svg {
   width: clamp(250px, 25%, 300px);
+}
+.roles-grid .side-by-side svg text {
+  font-family: 'National 2 Narrow Web';
 }
 #first-role-image-wide {
   margin: auto;
