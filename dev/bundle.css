@@ -755,6 +755,7 @@ a {
   margin-top: 1rem;
   text-align: center;
   width: 95%;
+  max-width: 370px;
 }
 .intro__byline {
   max-width: 40rem;
@@ -771,14 +772,14 @@ a {
   text-align: center;
 }
 .intro__image {
-  max-width: 55rem;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
   background-image: url("assets/images/Kpop_top_notext.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  padding-bottom: 45%;
+  padding-bottom: 35%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -789,6 +790,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3rem;
+}
+@media (max-width: 1000px) {
+  .intro__image {
+    padding-bottom: 50%;
+  }
 }
 @media (max-width: 500px) {
   .intro__image {
@@ -805,13 +811,20 @@ a {
   position: relative;
   display: inline;
 }
+.section-hed {
+  font-family: 'National 2 Narrow Web';
+  font-size: 24px;
+  color: #1b065e;
+  font-weight: 600;
+  margin-top: 3rem;
+}
 h2 {
   line-height: 1.3;
 }
 .mouseover-text {
   display: none;
   background: #fcd4d4;
-  font-family: 'National 2 Narrow';
+  font-family: 'National 2 Narrow Web';
   font-size: 17px;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -1090,7 +1103,7 @@ main .prose-image {
 }
 .generation-label {
   font-weight: 700;
-  font-family: 'National 2 Narrow';
+  font-family: 'National 2 Narrow Web';
   font-size: 34px;
 }
 .generation-description {
@@ -1140,6 +1153,7 @@ main .prose-image {
 #methods-label {
   font-size: 1rem;
   font-weight: 600;
+  font-family: 'National 2 Narrow Web';
 }
 #methods {
   font-size: 0.8rem;
@@ -1178,13 +1192,33 @@ main .prose-image {
   top: 2rem;
   width: 300px;
 }
+.legend-wrapper .legend-small .legend-1 {
+  width: 22.882882882882882vw;
+  width: calc(calc(100vw - 100px) * 0.253 / 3);
+}
+.legend-wrapper .legend-small .legend-2 {
+  width: calc(10.951351351351352vw / 3);
+}
+.legend-wrapper .legend-small .legend-3 {
+  width: calc(2.5233528459334913vw / 3);
+}
+.legend-wrapper .legend-large .legend-1 {
+  width: 22.882882882882882vw;
+  width: calc(calc(100vw - 100px) * 0.253 * 0.66);
+}
+.legend-wrapper .legend-large .legend-2 {
+  width: calc(10.951351351351352vw * 0.66);
+}
+.legend-wrapper .legend-large .legend-3 {
+  width: calc(2.5233528459334913vw * 0.66);
+}
 .legend {
   background-color: #c0c0c0;
   background: #f0c94e;
   margin: 0;
-  height: 2.003816793893129vh;
+  height: 13px;
   font-size: 0.2rem;
-  margin-top: 5px;
+  margin-top: 7px;
   margin-right: 5px;
   border: 1px solid #fff;
 }
@@ -1197,6 +1231,11 @@ main .prose-image {
   text-align: center;
   padding-top: 3px;
   font-weight: 300;
+  margin-right: 5px;
+}
+.legend-number {
+  font-weight: 600;
+  margin-right: 5px;
 }
 .legend-label {
   height: 0.2vh;
@@ -1205,16 +1244,6 @@ main .prose-image {
   z-index: 1;
   display: none;
   background-color: #fff;
-}
-.legend-1 {
-  width: 22.882882882882882vw;
-  width: calc(calc(100vw - 100px) * 0.253);
-}
-.legend-2 {
-  width: 10.951351351351352vw;
-}
-.legend-3 {
-  width: 2.523352845933491vw;
 }
 .yt-wrapper {
   max-width: 100%;

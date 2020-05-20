@@ -7061,7 +7061,7 @@ var _default = tippy;
 exports.default = _default;
 },{"@popperjs/core":"jI1K"}],"d4Ux":[function(require,module,exports) {
 
-},{}],"epB2":[function(require,module,exports) {
+},{}],"main.js":[function(require,module,exports) {
 "use strict";
 
 var _lodash = _interopRequireDefault(require("lodash.debounce"));
@@ -7154,10 +7154,8 @@ function init() {
   d3.selectAll(".tooltip-highlight-gif").each(function (d) {
     var imgTag = d3.select(this).attr("data-tippy-content");
     d3.select(this).on("mouseover", function (d) {
-      console.log("mouseovering");
       d3.select(this).transition().duration(0).select(".mouseover-gif").style("display", "inline-block");
     }).on("mouseout", function (d) {
-      console.log("mouseouting");
       d3.select(this).select(".mouseover-gif").transition().duration(1000).style("opacity", 0).on("end", function (d) {
         d3.select(this).style("opacity", null).style("display", null);
       });
@@ -7183,7 +7181,8 @@ function init() {
   //   );
   //set up legend
 
-  var legend = d3.select('.legend').classed('legend-1', true);
+  var legend = d3.selectAll('.legend').classed('legend-1', true); //const legendSmall = d3.select('.legend-small').classed('legend-1',true).
+
   var legendLabel = legend.append('div').attr('position', 'absolute').attr('stroke', '#333333').attr('height', '100').classed('legend-1', true).classed('legend-label', true);
   var iframe = d3.select('#bars').select('iframe').node(); // var iframe1 = d3.select('#topten').select('iframe').node();
 
@@ -7198,8 +7197,7 @@ function init() {
 
   window.addEventListener("resize", (0, _lodash.default)(resize, 150)); // setup sticky header menu
 
-  setupStickyHeader();
-  console.log("here"); // instantiate the scrollama
+  setupStickyHeader(); // instantiate the scrollama
 
   var scroller = (0, _scrollama.default)(); // setup the instance, pass callback functions
 
@@ -7210,9 +7208,6 @@ function init() {
   }).onStepEnter(function (response) {
     var test = response.index;
     iframe.src = iframe.src.replace(/#slide-.*/, "") + "#slide-" + test; // { element , index , direction }
-
-    console.log(test);
-    console.log(window.innerWidth);
 
     if (test == 0) {
       legend.classed('legend-2', false);
@@ -7240,25 +7235,7 @@ function init() {
       legendLabel.classed('legend-1', false);
       legendLabel.classed('legend-3', true);
     }
-  }).onStepExit(function (response) {// { element, index, direction }
-  }); // const scroller1 = scrollama();
-  // // setup the instance, pass callback functions
-  // scroller1
-  //   .setup({
-  //     step: "#topten-text .step",
-  //     offset: 0.4,
-  //     debug: false
-  //   })
-  //   .onStepEnter(response => {
-  //     var test = response.index
-  //     iframe1.src = iframe1.src.replace(/#slide-.*/, "") + "#slide-" + test;
-  //     // { element , index , direction }
-  //   })
-  //   .onStepExit(response => {
-  //     console.log(response)
-  //     // { element, index, direction }
-  //   });
-
+  }).onStepExit(function (response) {});
   var scroller2 = (0, _scrollama.default)(); // setup the instance, pass callback functions
 
   scroller2.setup({
@@ -7275,5 +7252,5 @@ function init() {
 }
 
 init();
-},{"lodash.debounce":"or4r","./utils/is-mobile":"WEtf","./utils/link-fix":"U9xJ","./graphic":"TAPd","./footer":"v9Q8","intersection-observer":"CRRU","scrollama":"vL5c","tippy.js":"DpGZ","tippy.js/dist/backdrop.css":"d4Ux","tippy.js/animations/shift-away.css":"d4Ux","tippy.js/animations/scale-extreme.css":"d4Ux"}]},{},["epB2"], null)
+},{"lodash.debounce":"or4r","./utils/is-mobile":"WEtf","./utils/link-fix":"U9xJ","./graphic":"TAPd","./footer":"v9Q8","intersection-observer":"CRRU","scrollama":"vL5c","tippy.js":"DpGZ","tippy.js/dist/backdrop.css":"d4Ux","tippy.js/animations/shift-away.css":"d4Ux","tippy.js/animations/scale-extreme.css":"d4Ux"}]},{},["main.js"], null)
 //# sourceMappingURL=/main.js.map

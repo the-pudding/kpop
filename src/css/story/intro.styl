@@ -37,6 +37,7 @@ a
 		margin-top 1rem
 		text-align center
 		width 95%
+		max-width 370px
 
 	&__byline
 		max-width $column-width
@@ -54,18 +55,20 @@ a
 		text-align center
 
 	&__image
-		max-width 55rem
+		max-width 800px
 		margin 0 auto
 		text-align center
 		background-image url('assets/images/Kpop_top_notext.png')
 		background-position center
 		background-size contain
 		background-repeat no-repeat
-		padding-bottom 45%
+		padding-bottom 35%
 		display flex
 		justify-content center
 		align-items center
 		margin-bottom 3rem
+		@media (max-width: 1000px)
+			padding-bottom 50%
 		@media (max-width: 500px)
 			padding-bottom 75%
 

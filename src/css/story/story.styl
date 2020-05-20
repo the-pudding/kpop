@@ -1,10 +1,17 @@
+.section-hed
+  font-family $national-narrow
+  font-size 24px
+  color $light-blue
+  font-weight 600
+  margin-top 3rem
+
 h2
   line-height 1.3
 
 .mouseover-text
   display none
   background #fcd4d4
-  font-family 'National 2 Narrow'
+  font-family $national-narrow
   font-size 17px
   margin-top 10px
   margin-bottom 10px
@@ -228,8 +235,9 @@ main
 
 .generation-label
   font-weight 700
-  font-family 'National 2 Narrow'
+  font-family $national-narrow
   font-size 34px
+
 
 .generation-description
   margin-top .4rem
@@ -278,6 +286,7 @@ main
 #methods-label
   font-size 1rem
   font-weight 600
+  font-family $national-narrow
 
 #methods
   font-size .8rem
@@ -315,13 +324,38 @@ main
       top 2rem
       width 300px
 
+.legend-wrapper
+  .legend-small
+    .legend-1
+        width 22.882882882882882vw
+        width calc(calc(100vw - 100px)*0.253/3)
+
+    .legend-2
+        width calc(10.951351351351352vw / 3)
+        //width calc(calc(100vw - 100px)*0.253)
+
+    .legend-3
+        width calc(2.5233528459334913vw / 3)
+        //width calc(calc(100vw - 100px)*0.253)
+  .legend-large
+    .legend-1
+      width 22.882882882882882vw
+      width calc(calc(100vw - 100px) * 0.253 * .66)
+
+    .legend-2
+      width calc(10.951351351351352vw * .66)
+
+    .legend-3
+      width calc(2.5233528459334913vw * .66)
+
+
 .legend
   background-color silver
   background rgb(240, 201, 78)
   margin 0
-  height 2.0038167938931295vh
+  height 13px
   font-size .2rem
-  margin-top 5px
+  margin-top 7px
   margin-right 5px
   border 1px solid white
 
@@ -334,6 +368,13 @@ main
   text-align center
   padding-top 3px
   font-weight 300
+  margin-right 5px
+
+.legend-number
+  font-weight 600
+  margin-right 5px
+
+
 
 .legend-label
   height .2vh
@@ -342,16 +383,6 @@ main
   z-index 1
   display none
   background-color #ffffff
-
-.legend-1
-  width 22.882882882882882vw
-  width calc(calc(100vw - 100px)*0.253)
-
-.legend-2
-  width 10.951351351351352vw
-
-.legend-3
-  width 2.5233528459334913vw
 
 .yt-wrapper
   max-width 100%

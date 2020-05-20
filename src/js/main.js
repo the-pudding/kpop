@@ -84,7 +84,6 @@ function init() {
       let imgTag = d3.select(this).attr("data-tippy-content");
       d3.select(this)
         .on("mouseover",function(d){
-          console.log("mouseovering");
           d3.select(this)
             .transition()
             .duration(0)
@@ -92,7 +91,6 @@ function init() {
             .style("display","inline-block")
         })
         .on("mouseout",function(d){
-          console.log("mouseouting");
           d3.select(this)
             .select(".mouseover-gif")
             .transition()
@@ -127,7 +125,8 @@ function init() {
   //   );
 
   //set up legend
-  const legend = d3.select('.legend').classed('legend-1',true)
+  const legend = d3.selectAll('.legend').classed('legend-1',true)
+  //const legendSmall = d3.select('.legend-small').classed('legend-1',true).
   const legendLabel = legend.append('div')
     .attr('position','absolute')
     .attr('stroke','#333333')
@@ -149,7 +148,6 @@ function init() {
   window.addEventListener("resize", debounce(resize, 150));
   // setup sticky header menu
   setupStickyHeader();
-  console.log("here");
   // instantiate the scrollama
   const scroller = scrollama();
   // setup the instance, pass callback functions
@@ -163,8 +161,6 @@ function init() {
       var test = response.index
       iframe.src = iframe.src.replace(/#slide-.*/, "") + "#slide-" + test;
       // { element , index , direction }
-      console.log(test)
-      console.log(window.innerWidth)
       if (test == 0) {
         legend.classed('legend-2',false)
         legend.classed('legend-3',false)
@@ -191,25 +187,8 @@ function init() {
       }
     })
     .onStepExit(response => {
-      // { element, index, direction }
     });
-  // const scroller1 = scrollama();
-  // // setup the instance, pass callback functions
-  // scroller1
-  //   .setup({
-  //     step: "#topten-text .step",
-  //     offset: 0.4,
-  //     debug: false
-  //   })
-  //   .onStepEnter(response => {
-  //     var test = response.index
-  //     iframe1.src = iframe1.src.replace(/#slide-.*/, "") + "#slide-" + test;
-  //     // { element , index , direction }
-  //   })
-  //   .onStepExit(response => {
-  //     console.log(response)
-  //     // { element, index, direction }
-  //   });
+
   const scroller2 = scrollama();
   // setup the instance, pass callback functions
   scroller2
