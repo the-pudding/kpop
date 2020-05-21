@@ -848,36 +848,6 @@ main .prose-image {
   height: 100vh;
   z-index: 0;
 }
-@media (min-height: 750px) and (min-width: 700px) {
-  .chart {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .chart .flourish-embed,
-  .chart #bars {
-    height: auto;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-        -ms-transform: translate(0, -50%);
-            transform: translate(0, -50%);
-    position: absolute;
-  }
-  .chart .chart-title {
-    position: absolute;
-    top: 3rem;
-    left: 0px;
-    right: 0px;
-    margin: 0 auto;
-  }
-}
 .chart-title {
   font-family: 'National 2 Narrow Web';
   font-weight: 600;
@@ -938,6 +908,12 @@ main .prose-image {
   top: 10px;
   position: absolute;
 }
+#rankings {
+  max-width: 70rem;
+  margin: 0 auto;
+  left: 0px;
+  right: 0px;
+}
 #bars-text,
 #rankings-text {
   display: -webkit-box;
@@ -968,6 +944,11 @@ main .prose-image {
 #rankings-text .overlay {
   -ms-flex-item-align: center;
       align-self: center;
+}
+@media (min-width: 1000px) {
+  #rankings-text .overlay {
+    margin-left: 18rem;
+  }
 }
 .roles-grid svg {
   width: clamp(250px, 25%, 300px);

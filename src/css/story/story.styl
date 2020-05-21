@@ -33,22 +33,6 @@ main
   top 0px
   height 100vh
   z-index 0
-  @media (min-height: 750px)
-    @media (min-width: 700px)
-      display flex
-      flex-direction column
-      justify-content center
-      .flourish-embed, #bars
-        height auto
-        top 50%
-        transform translate(0,-50%)
-        position absolute
-      .chart-title
-        position absolute
-        top 3rem
-        left 0px
-        right 0px
-        margin 0 auto
 .chart-title
   font-family $national-narrow
   font-weight 600
@@ -104,6 +88,12 @@ main
   top 10px
   position absolute
 
+#rankings
+  max-width 70rem
+  margin 0 auto
+  left 0px
+  right 0px
+
 
 #bars-text, #rankings-text
   display flex
@@ -126,6 +116,8 @@ main
 #rankings-text
   .overlay
     align-self center
+    @media (min-width: 1000px)
+      margin-left 18rem
 
 .roles-grid
   svg

@@ -7095,6 +7095,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /* global d3 */
 var $body = d3.select("body");
 var previousWidth = 0;
+var offset = .5;
 
 function resize() {
   // only do resize on width changes, not height
@@ -7123,6 +7124,10 @@ function setupStickyHeader() {
 }
 
 function init() {
+  if (_isMobile.default) {
+    offset = 1;
+  }
+
   var tippyImages = {
     "bts": "<img src='https://media.giphy.com/media/3ofT5IUGY3FNyi5MAg/giphy.gif'>",
     "seo": "<img src='https://media.giphy.com/media/YRKlg4ZYNZrhtFGyd8/giphy.gif'>",
@@ -7203,7 +7208,7 @@ function init() {
 
   scroller.setup({
     step: "#bars-text .step",
-    offset: 0.4,
+    offset: offset,
     debug: false
   }).onStepEnter(function (response) {
     var test = response.index;
@@ -7240,7 +7245,7 @@ function init() {
 
   scroller2.setup({
     step: "#rankings-text .step",
-    offset: 0.5,
+    offset: offset,
     debug: false
   }).onStepEnter(function (response) {
     var test = response.index;

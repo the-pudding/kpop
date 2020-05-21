@@ -13,6 +13,7 @@ import 'tippy.js/animations/scale-extreme.css';
 
 const $body = d3.select("body");
 let previousWidth = 0;
+let offset = .5;
 
 function resize() {
   // only do resize on width changes, not height
@@ -38,6 +39,11 @@ function setupStickyHeader() {
 }
 
 function init() {
+
+  if(isMobile){
+    offset = 1;
+  }
+
   const tippyImages = {"bts":"<img src='https://media.giphy.com/media/3ofT5IUGY3FNyi5MAg/giphy.gif'>",
                        "seo":"<img src='https://media.giphy.com/media/YRKlg4ZYNZrhtFGyd8/giphy.gif'>",
                        "super":"<img src='https://media.giphy.com/media/l0ErUBWwX9KaSoWnC/giphy.gif'>",
@@ -154,7 +160,7 @@ function init() {
   scroller
     .setup({
       step: "#bars-text .step",
-      offset: 0.4,
+      offset: offset,
       debug: false
     })
     .onStepEnter(response => {
@@ -194,7 +200,7 @@ function init() {
   scroller2
     .setup({
       step: "#rankings-text .step",
-      offset: 0.5,
+      offset: offset,
       debug: false
     })
     .onStepEnter(response => {
