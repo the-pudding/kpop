@@ -811,6 +811,18 @@ a {
   position: relative;
   display: inline;
 }
+.logo-swap {
+  width: 160px;
+  display: inline-block;
+  position: relative;
+}
+.logo-swap img {
+  width: 144px;
+  display: inline-block;
+  position: absolute;
+  top: -20px;
+  left: 7px;
+}
 .section-hed {
   font-family: 'National 2 Narrow Web';
   font-size: 24px;

@@ -40,6 +40,8 @@ function setupStickyHeader() {
 
 function init() {
 
+  d3.select(".logo-swap").html('<a href="https://kontinentalist.com/" target="_blank"><img src="assets/images/kont-logo_2.png" alt="Kontinentalist Logo"></a>')
+
   if(isMobile){
     offset = 1;
   }
