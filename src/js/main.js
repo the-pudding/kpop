@@ -58,6 +58,7 @@ function init() {
                        "seventeen":"<img src='https://media.giphy.com/media/3o6wr86sMOUaOOHXRS/giphy.gif'>",
                        "jayz":"<img src='https://media.giphy.com/media/C0CLctoErM7WE/giphy.gif'>",
                        "jungkook":"<img src='https://media.giphy.com/media/SqBnf9Go5I4MhhGU9t/giphy.gif'>",
+                       "twice":"<img src='https://media.giphy.com/media/chER4LakgBBM1YAUVv/giphy.gif'>",
                        "exp":"<img src='https://media.giphy.com/media/PlV6Y75V8b0Bd2krC6/giphy.gif'>"}
 
   d3.selectAll(".tooltip-highlight-gif")

@@ -2,29 +2,36 @@
 
 <!-- pre chart text-->
   <div class='prose'>
-    <p>{{{doc.topten4}}}</p>
     <p>{{{doc.rankings01}}}</p>
   </div>
   <img class="prose-image" src='assets/images/Kpop_top.svg'>
   <div class="prose">
     <p>{{{doc.rankings02}}}</p>
+    <p>{{{doc.rankings03}}}</p>
   </div>
 
   <div class='roles-grid'>
-    <img inline id='first-role-image-wide' src='seniority_group.svg'>
-    <img inline id='first-role-image-long' src='seniority_group_long_3.svg'>
+    <picture>
+      <source
+       srcset="assets/images/frame-1.png 2652w, assets/images/frame-1-1.png 1326w, assets/images/roles_1.png 400w"
+       sizes="(max-width: 1200px) 1200px, 100vw"
+      >
+      <img class="frame-img" src="assets/images/frame-1.png" alt="">
+    </picture>
+
+    <img inline id='' src='frame-1-2.svg'>
+    <!-- <img inline id='first-role-image-long' src='seniority_group_long_3.svg'>
     <div class='side-by-side'>
       <img inline id="test" src='rapper_group_4.svg'>
       <img inline src='vocalist_group_2.svg'>
       <img inline src='appearance_group_2.svg'>
       <img inline src='dancer_group_2.svg'>
-    </div>
+    </div> -->
   </div>
   <div class="prose">
-
     <p>{{{doc.rankings03}}}</p>
     <p>{{{doc.rankings04}}}</p>
-
+    <p>{{{doc.rankings05}}}</p>
   </div>
 
 <!-- here is the flourish chart to become sticky -->
@@ -32,7 +39,7 @@
 
     <!--   chart title  -->
     <div class='chart-title'>
-      <h2>Change in Band Positions, 1990-2019</h2>
+      <h2>Change in Band Positions, 1/1992-6/2020</h2>
     </div>
 
     <div style="width: 100%;" class="flourish-embed" data-src="story/220054" id='rankings'></div>
@@ -42,24 +49,24 @@
 <!-- adding scrolly text elements below -->
   <div class='' id='rankings-text'>
     <div class='step overlay seniority-wrapper' data-step=1>
-      <h2 class='group' id='seniority-label'>Seniority</h2>
+      <h2 class='group' id='seniority-label'>Leader and Maknae</h2>
       <p class='group-description'>{{{doc.rankings1}}}</p>
     </div>
     <div class='step overlay rap-wrapper' data-step=2>
-      <h2 class='group' id='rap-label'>Rap</h2>
+      <h2 class='group' id='rap-label'>Rappers</h2>
       <p class='group-description'>{{{doc.rankings2}}}</p>
     </div>
     <div class='step overlay vocals-wrapper' data-step=3>
-      <h2 class='group' id='vocals-label'>Vocals</h2>
+      <h2 class='group' id='vocals-label'>Vocalists</h2>
       <p class='group-description'>{{{doc.rankings3}}}</p>
     </div>
     <div class='step overlay aesthetics-wrapper' data-step=4>
-      <h2 class='group' id='aesthetics-label'>Aesthetics</h2>
+      <h2 class='group' id='aesthetics-label'>Visuals</h2>
       <p class='group-description'>{{{doc.rankings4}}}</p>
     </div>
     <div class='step'>
       <div class='overlay dance-wrapper' data-step=5 id='final-group'>
-        <h2 class='group' id='dance-label'>Dance</h2>
+        <h2 class='group' id='dance-label'>Dancers</h2>
         <p class='group-description'>{{{doc.rankings5}}}</p>
       </div>
     </div>

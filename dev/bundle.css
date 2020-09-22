@@ -740,11 +740,6 @@ a {
   text-align: center;
   color: #1b065e;
   font-size: 55px;
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   line-height: 1.3;
   font-family: 'National 2 Narrow Web';
   width: 95%;
@@ -775,7 +770,7 @@ a {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
-  background-image: url("assets/images/Kpop_top_notext.png");
+  background-image: url("assets/images/kpop_top_v3.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -971,13 +966,16 @@ main .prose-image {
     margin-left: 18rem;
   }
 }
-.roles-grid svg {
-  width: clamp(250px, 25%, 300px);
+.roles-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
 }
-@media (max-width: 500px) {
-  .roles-grid svg {
-    width: 90%;
-  }
+.roles-grid svg {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 .roles-grid svg text {
   font-family: 'National 2 Narrow Web';

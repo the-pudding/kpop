@@ -50,12 +50,8 @@ main
   color #191717
   text-align center
   line-height 1.2
-  //position absolute
-  //top 0px
-  //left 0px
   z-index 1000
   position relative
-  //right 0px
   margin 0 auto
 
   h2
@@ -139,10 +135,14 @@ main
       margin-left 18rem
 
 .roles-grid
+  max-width 1200px
+  margin 0 auto
+  position relative
   svg
-    width clamp(250px, 25%, 300px)
-    @media (max-width: 500px)
-      width 90%
+    position absolute
+    width 100%
+    top 0
+    left 0
     text
       font-family $national-narrow
   .side-by-side
